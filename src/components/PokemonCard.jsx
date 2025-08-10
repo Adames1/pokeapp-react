@@ -4,13 +4,13 @@ function PokemonCard({ pokemon }) {
   const { name, id, sprites, types } = pokemon;
 
   return (
-    <Link to="/Pokemondetails">
+    <Link to={`/Pokemondetails/${id}`}>
       <div>
         <div>
           <h2>{name}</h2>
-          <span>{`#${id}`}</span>
+          <span>{`#${id.toString().padStart(3, "0")}`}</span>
         </div>
-        <span>{types[0].type.name}</span>
+        <span>{types.map((type) => type.type.name)}</span>
       </div>
       <img src={sprites.front_default} alt={`Sprite of ${name}`} />
     </Link>

@@ -11,7 +11,7 @@ function AppRoutes() {
       <Route element={<LayoutMain />}>
         <Route path="/pokemonlist" element={<PokemonList />} />
       </Route>
-      <Route path="/Pokemondetails" element={<PokemonDetails />} />
+      <Route path="/Pokemondetails/:id" element={<PokemonDetails />} />
     </Routes>
   );
 }

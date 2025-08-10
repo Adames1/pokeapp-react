@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom";
+
 function HomePage() {
   return (
     <div>
       <h1>Welcome to PokeApp</h1>
       <div>
-        <div>Pokedex</div>
-        <div>Moves</div>
-        <div>Abilities</div>
-        <div>Items</div>
-        <div>Locations</div>
-        <div>Types Charts</div>
+        <Link to="/pokemonlist">Pokedex</Link>
+        <Link>Moves</Link>
+        <Link>Abilities</Link>
+        <Link>Items</Link>
+        <Link>Locations</Link>
+        <Link>Types Charts</Link>
       </div>
     </div>
   );
