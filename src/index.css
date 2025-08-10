@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Exo 2", sans-serif;
+  }
+
+  body {
+    background-color: #ffff;
+    color: #0c0c0c;
+  }
+}
+
+/* custom css tailwind */
+.grass {
+  @apply bg-green-400;
+}
+
+.fire {
+  @apply bg-red-400;
+}
+
+.water {
+  @apply bg-blue-400;
+}
