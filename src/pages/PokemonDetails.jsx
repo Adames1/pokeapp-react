@@ -32,26 +32,49 @@ function PokemonDetails() {
   if (loading) return <Loading />;
 
   return (
-    <div>
-      <header>
-        <Link to="/pokemonlist">
-          <MoveLeft />
+    <div className="container mx-auto px-4 py-6">
+      <header className="mb-4">
+        <Link
+          to="/pokemonlist"
+          aria-label="Volver a la lista de Pokémon"
+          className="text-gray-700 hover:text-emerald-500 transition flex items-center gap-2"
+        >
+          <MoveLeft size={20} />
+          <span className="font-medium">Volver</span>
         </Link>
       </header>
-      <div>
-        <div>
-          <div>
-            <h2>{pokemon.name}</h2>
-            <span>{`#${pokemon.id.toString().padStart(3, "0")}`}</span>
-          </div>
-          <span>{pokemon.types.map((type) => type.type.name)}</span>
-        </div>
+
+      <div className="flex flex-col md:flex-row items-center gap-6">
         <img
           src={pokemon.sprites.front_default}
           alt={`Sprite of ${pokemon.name}`}
+          className="w-40 h-40 object-contain"
         />
+
+        <div className="text-center md:text-left">
+          <h2 className="capitalize font-bold text-2xl text-gray-800">
+            {pokemon.name}
+          </h2>
+          <span className="text-gray-600 font-semibold block mb-2">
+            {`#${pokemon.id.toString().padStart(3, "0")}`}
+          </span>
+
+          <div className="flex gap-2 justify-center md:justify-start flex-wrap">
+            {pokemon.types.map((type, index) => (
+              <span
+                key={index}
+                className="capitalize px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium"
+              >
+                {type.type.name}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
-      <PokemonInfo pokemon={pokemon} />
+
+      <div className="mt-8">
+        <PokemonInfo pokemon={pokemon} />
+      </div>
     </div>
   );
 }

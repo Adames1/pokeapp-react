@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 function LayoutMain() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <main>
         <Outlet />

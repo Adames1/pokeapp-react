@@ -8,13 +8,21 @@
 
   body {
     background-color: #ffff;
-    color: #0c0c0c;
+    color: #3b3b3b;
   }
+}
+
+.container {
+  @apply max-w-5xl mx-auto px-6 py-8;
+}
+
+.card-home {
+  @apply rounded-lg text-white font-bold h-15 md:h-20 lg:h-22 md:text-xl flex items-center px-4 bg-[url('/pokeball.png')] bg-no-repeat bg-right-bottom bg-[length:90px] md:bg-[length:150px] lg:bg-[length:170px] opacity-100;
 }
 
 /* custom css tailwind */
 .grass {
-  @apply bg-green-400;
+  @apply bg-emerald-400;
 }
 
 .fire {
@@ -23,4 +31,44 @@
 
 .water {
   @apply bg-blue-400;
+}
+
+.electric {
+  @apply bg-yellow-300;
+}
+
+.psychic {
+  @apply bg-pink-400;
+}
+
+.rock {
+  @apply bg-stone-400;
+}
+
+.ground {
+  @apply bg-yellow-700;
+}
+
+.ice {
+  @apply bg-cyan-300;
+}
+
+.dragon {
+  @apply bg-indigo-500;
+}
+
+.dark {
+  @apply bg-gray-700;
+}
+
+.fairy {
+  @apply bg-fuchsia-300;
+}
+
+.bug {
+  @apply bg-lime-400;
+}
+
+.normal {
+  @apply bg-gray-300;
 }
